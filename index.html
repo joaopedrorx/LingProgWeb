@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulário - Atividade LPW2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Cadastro</h1>
+    <form id="cadastroForm" novalidate>
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" class="obrigatorio regra-nome" placeholder="Seu nome completo" autocomplete="name" required minlength="3" />
+        <small class="error" id="erro-nome"></small>
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" class="obrigatorio regra-email" placeholder="seuemail@exemplo.com" autocomplete="email" required />
+        <small class="error" id="erro-email"></small>
+      </div>
+
+      <div class="campo">
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" class="obrigatorio mascara-telefone" placeholder="(99) 99999-9999" required />
+        <small class="error" id="erro-telefone"></small>
+      </div>
+
+      <div class="campo">
+        <label for="cpf">CPF</label>
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" class="obrigatorio mascara-cpf regra-cpf" placeholder="000.000.000-00" required />
+        <small class="error" id="erro-cpf"></small>
+      </div>
+
+      <div class="campo">
+        <label for="nascimento">Data de Nascimento</label>
+        <input id="nascimento" name="nascimento" type="text" inputmode="numeric" class="obrigatorio mascara-data maior-de-idade" placeholder="dd/mm/aaaa" required />
+        <small class="error" id="erro-nascimento"></small>
+      </div>
+
+      <button type="submit">Enviar</button>
+      <p id="sucesso" class="sucesso" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
